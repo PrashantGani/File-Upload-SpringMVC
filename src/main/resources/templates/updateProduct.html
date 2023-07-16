@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+</head>
+
+<body>
+		<h2>Update Product</h2>
+			<form class="text-center border border-light p-5" action="/updateProduct" method="post"
+				enctype="multipart/form-data">
+				<pre>
+					<input type="hidden" name="id"/>
+					product name<input type="text" name="pname"/>
+					product price<input type="text" name="price" />
+					product desc<input type="text" name="desc" />
+					product file<input type="file" name="file"/>
+					<input type="submit" value="update"/>
+				</pre>
+			</form>
+
+</body>
+
+</html>

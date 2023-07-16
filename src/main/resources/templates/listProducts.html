@@ -1,0 +1,32 @@
+
+		<div class="col-12">
+			
+			
+            <h3 class="text-center">list of products</h3>
+			<hr>
+			<table class="table">
+				<thead class="thead-dark">
+					<tr>
+						<th scope="col">image</th>
+						<th scope="col">name</th>
+						<th scope="col">description</th>
+						<th scope="col">price</th>
+						<th scope="col">delete</th>
+						<th scope="col">update</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="product : ${products}">
+						<th scope="row"><img alt="" th:src="*{'data:image/jpeg;base64,'+{product.image}}" style="width: 100px;height: 100px;"></th>
+						<td>[[*{product.name}]]</td>
+						<td>[[*{product.description}]]</td>
+						<td>[[*{product.price}]]</td>
+						<td><a th:href="@{/deleteProd/{id}(id=${product.id})}"
+							class="btn btn-danger mt-4">delete</a></td>
+						<td><a th:href="@{/updateProd/{id}(id=${product.id})}"
+							class="btn btn-danger mt-4">update</a></td>
+					</tr>
+				</tbody>
+			</table>
+			<hr>
+		</div>
